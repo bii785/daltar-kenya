@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+  Base-layer overrides that don't fit as Tailwind utility classes
+  (mirrors main.css's global html/body rules). Colors/fonts themselves
+  live in tailwind.config.ts as design tokens, not here.
+*/
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-daltar-bg-deep text-daltar-text-bright font-sans;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+}
