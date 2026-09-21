@@ -15,7 +15,14 @@ down_revision = "0004"
 branch_labels = None
 depends_on = None
 
-order_status = postgresql.ENUM("pending", "paid", "fulfilled", "cancelled", name="order_status")
+order_status = postgresql.ENUM(
+    "pending",
+    "paid",
+    "fulfilled",
+    "cancelled",
+    name="order_status",
+    create_type=False,
+)
 
 
 def upgrade() -> None:

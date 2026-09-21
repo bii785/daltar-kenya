@@ -15,8 +15,13 @@ down_revision = None
 branch_labels = None
 depends_on = None
 
-user_role = postgresql.ENUM("customer", "staff", "admin", name="user_role")
-
+user_role = postgresql.ENUM(
+    "customer",
+    "staff",
+    "admin",
+    name="user_role",
+    create_type=False,
+)
 
 def upgrade() -> None:
     bind = op.get_bind()

@@ -16,7 +16,14 @@ branch_labels = None
 depends_on = None
 
 lead_interest = postgresql.ENUM(
-    "restaurants", "hotels", "golfclubs", "bars", "smes", "other", name="lead_interest"
+    "restaurants",
+    "hotels",
+    "golfclubs",
+    "bars",
+    "smes",
+    "other",
+    name="lead_interest",
+    create_type=False,
 )
 
 
